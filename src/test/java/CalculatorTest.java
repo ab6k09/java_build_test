@@ -5,6 +5,6 @@ public class CalculatorTest {
 @Test
 public void testAddition() {
 Calculator calculator = new Calculator();
-assertEquals(30, calculator.add(10, 20));
+assertEquals(30, calculator.add(50, 20));
 }
 }
