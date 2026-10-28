@@ -1,0 +1,24 @@
+name: Build and Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build Java Project
+        run: |
+          mkdir -p src
+          echo 'public class Main { public static void main(String[] args) { System.out.println("Build Successful!"); } }' > src/Main.java
+          javac src/Main.java
+          java -cp src Main
