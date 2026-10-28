@@ -22,3 +22,4 @@ jobs:
           echo 'public class Main { public static void main(String[] args) { System.out.println("Build Successful!"); } }' > src/Main.java
           javac src/Main.java
           java -cp src Main
+# Testing automatic trigger
